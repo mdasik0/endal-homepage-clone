@@ -54,10 +54,12 @@ const PreviewCard = ({
 
         <div className="w-full h-full flex flex-col gap-2 justify-center">
           <h3 className="text-[22px] font-medium">{title}</h3>
-          <p className="text-[18px] text-[#bfbfbf]">{description}</p>
+          <p className="text-[18px] text-[#bfbfbf] leading-[24px]">
+            {description}
+          </p>
         </div>
 
-        <div className="flex items-center gap-1.5 mt-3">
+        <div className="flex items-center gap-1.5 mt-4">
           <p className="text-[18px] text-white font-medium cursor-pointer hover:underline decoration-[#262626] decoration-4">
             Learn More
           </p>
