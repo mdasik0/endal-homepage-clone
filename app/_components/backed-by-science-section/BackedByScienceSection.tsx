@@ -4,6 +4,7 @@ import number1 from "@/public/numbers/1.svg";
 import number2 from "@/public/numbers/2.svg";
 import number3 from "@/public/numbers/3.svg";
 import number4 from "@/public/numbers/4.svg";
+import { HiArrowSmUp } from "react-icons/hi";
 const BackedByScienceSection = () => {
   return (
     <div>
@@ -62,19 +63,30 @@ const BackedByScienceSection = () => {
           </p>
         </div>
         <div className="flex flex-col items-center gap-2">
-        <div className="w-[270px] h-full">
-          <Image
-            className="w-full h-full object-contain"
-            src={number4}
-            alt="number-4"
-            width={270}
-            height={224}
-          />
+          <div className="w-[270px] h-full">
+            <Image
+              className="w-full h-full object-contain"
+              src={number4}
+              alt="number-4"
+              width={270}
+              height={224}
+            />
+          </div>
+          <p className="text-[18px] text-[#bfbfbf] ">
+            Longer, more consistent focus; maintained 95% of listening time2
+          </p>
         </div>
-        <p className="text-[18px] text-[#bfbfbf] ">Longer, more consistent focus; maintained 95% of listening time2
+      </div>
 
-</p>
+      {/* description */}
+      <div className="w-[564px] h-[108px] mx-auto mt-[48px] flex flex-col items-center text-[#bfbfbf] text-center justify-center gap-3">
+        <div className="flex items-center gap-1.5 ">
+          <p className="hover:underline decoration-[#262626] decoration-4">
+            {"1) *Read the Whitepaper on Bioarxiv"}
+          </p>
+          <HiArrowSmUp className="rotate-45" />
         </div>
+        <p>{"2) Survey methodology: The Experience Sampling Method provided by Mihaly Csikszentmihalyi (Professor of Psychology and Management at Claremont Graduate University, author of the best-selling book Flow)"}</p>
       </div>
     </div>
   );

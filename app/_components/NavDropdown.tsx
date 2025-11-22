@@ -5,7 +5,6 @@ import { useState } from "react";
 import offer1 from "@/public/NavDrop/nav-offer-1.svg";
 import offer2 from "@/public/NavDrop/nav-offer-2.svg";
 import offer3 from "@/public/NavDrop/nav-offer-3.svg";
-import { SlArrowDown } from "react-icons/sl";
 import { ChevronDown } from "lucide-react";
 
 const NavDropdown = () => {
