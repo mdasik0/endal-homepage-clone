@@ -38,7 +38,7 @@ const PreviewCardGrid = ({
     },
   ];
   return (
-    <div className="w-[1152px] h-[610px] mx-auto flex gap-6 justify-center relative z-40">
+    <div className="w-[1152px] h-[188px] mx-auto flex gap-6 justify-center relative z-40">
       {previewVideoArr.map((video) => (
         <PreviewCard
           key={video.videoId}
