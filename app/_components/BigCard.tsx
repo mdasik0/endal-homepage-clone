@@ -8,12 +8,12 @@ interface BigCardProps {
 }
 const BigCard = ({ children, title, description }: BigCardProps) => {
   return (
-    <div className="w-[564px] h-[742px] rounded-[20px] overflow-hidden">
+    <div className="w-[564px] h- rounded-[20px] overflow-hidden">
       {/* image */}
       <div className="h-[361px] w-full">{children}</div>
       {/* text content */}
       <div
-        className="h-[354px] w-full p-6 flex flex-col gap-[20px]"
+        className="h- w-full p-6 flex flex-col gap-[20px]"
         style={{
           background: "linear-gradient(rgb(24, 24, 24), rgba(0, 0, 0, 0))",
         }}
