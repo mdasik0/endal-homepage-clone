@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import cover from "@/public/background/cover.svg";
 import { FaPlay } from "react-icons/fa";
 
@@ -13,18 +13,17 @@ const VideoPlayerDisplay = ({
   selectedVideoId,
   handlePausePlay,
 }: VideoPlayerDisplayProps) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-    const videoRef = useRef<HTMLVideoElement>(null);
-
-    useEffect(() => {
-      if (play && videoRef.current) {
-        videoRef.current.play().catch((error) => {
-          console.error("Error playing video:", error);
-        });
-      } else if (!play && videoRef.current) {
-        videoRef.current.pause();
-      }
-    }, [play]);
+  useEffect(() => {
+    if (play && videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.error("Error playing video:", error);
+      });
+    } else if (!play && videoRef.current) {
+      videoRef.current.pause();
+    }
+  }, [play]);
   return (
     <div className='w-[1152px] h-[610px] mx-auto mt-26 bg-[url("/background/background.svg")] '>
       <div className="w-[368px] h-[610px] mx-auto relative bg-transparent flex flex-col justify-end ">
@@ -41,51 +40,22 @@ const VideoPlayerDisplay = ({
           </div>
         </div>
         <div className="w-[368px] shadow-effect h-full mx-auto absolute z-10 bg-black">
-          {(play && !selectedVideoId) ||
-          (play && selectedVideoId === "video-1") ? (
+          {play ? (
             <video
               ref={videoRef}
-              src="/preview-videos/video-1.mp4"
+              src={`/preview-videos/${selectedVideoId || "video-1"}.mp4`}
               className="w-full h-full object-contain object-bottom mx-auto pt-10"
               autoPlay
               playsInline
               loop
-            />
-          ) : play && selectedVideoId === "video-2" ? (
-            <video
-              ref={videoRef}
-              src="/preview-videos/video-2.mp4"
-              className="w-full h-full object-contain object-bottom mx-auto pt-10"
-              autoPlay
-              playsInline
-              loop
-            />
-          ) : play && selectedVideoId === "video-3" ? (
-            <video
-              ref={videoRef}
-              src="/preview-videos/video-3.mp4"
-              className="w-full h-full object-contain object-bottom mx-auto pt-10"
-              autoPlay
-              playsInline
-              loop
-            />
-          ) : play && selectedVideoId === "video-4" ? (
-            <video
-              ref={videoRef}
-              src="/preview-videos/video-4.mp4"
-              className="w-full h-full object-contain object-bottom mx-auto pt-10"
-              autoPlay
-              playsInline
-              loop
+              preload="auto"
             />
           ) : (
-            !play && (
-              <Image
-                className="w-full h-full object-contain object-bottom mx-auto pt-10"
-                src={cover}
-                alt="cover"
-              />
-            )
+            <Image
+              className="w-full h-full object-contain object-bottom mx-auto pt-10"
+              src={cover}
+              alt="cover"
+            />
           )}
         </div>
       </div>
