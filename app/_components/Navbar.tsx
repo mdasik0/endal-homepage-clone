@@ -23,19 +23,19 @@ const Navbar = () => {
       {/* links */}
       <div>
         <ul className="flex items-center gap-8 text-[22px] font-medium">
-          <li className="cursor-pointer hover:underline decoration-stone-600">
+          <li className="cursor-pointer hover:underline decoration-stone-600 decoration-3">
             ADHD
           </li>
-          <li className="cursor-pointer hover:underline decoration-stone-600">
+          <li className="cursor-pointer hover:underline decoration-stone-600 decoration-3">
             Sleep
           </li>
-          <li className="cursor-pointer hover:underline decoration-stone-600">
+          <li className="cursor-pointer hover:underline decoration-stone-600 decoration-3">
             Focus
           </li>
-          <li className="cursor-pointer hover:underline decoration-stone-600">
+          <li className="cursor-pointer hover:underline decoration-stone-600 decoration-3">
             Relax
           </li>
-          <li className="cursor-pointer hover:underline decoration-stone-600">
+          <li className="cursor-pointer hover:underline decoration-stone-600 decoration-3">
             Activity
           </li>
           <NavDropdown />

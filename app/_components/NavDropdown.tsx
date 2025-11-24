@@ -31,22 +31,22 @@ const NavDropdown = () => {
           <div className="">
             <p className="text-[#bfbfbf] text-sm font-medium mb-4 ">Company</p>
             <ul className="space-y-1.5">
-              <li className="text-white hover:underline decoration-stone-500 hover:text-gray-300 cursor-pointer transition-colors">
+              <li className="text-white hover:underline decoration-stone-500 decoration-3 hover:text-gray-300 cursor-pointer transition-colors">
                 Team
               </li>
-              <li className="text-white hover:underline decoration-stone-500 hover:text-gray-300 cursor-pointer transition-colors">
+              <li className="text-white hover:underline decoration-stone-500 decoration-3 hover:text-gray-300 cursor-pointer transition-colors">
                 Manifesto
               </li>
-              <li className="text-white hover:underline decoration-stone-500 hover:text-gray-300 cursor-pointer transition-colors">
+              <li className="text-white hover:underline decoration-stone-500 decoration-3 hover:text-gray-300 cursor-pointer transition-colors">
                 Newsroom
               </li>
-              <li className="text-white hover:underline decoration-stone-500 hover:text-gray-300 cursor-pointer transition-colors">
+              <li className="text-white hover:underline decoration-stone-500 decoration-3 hover:text-gray-300 cursor-pointer transition-colors">
                 Community
               </li>
-              <li className="text-white hover:underline decoration-stone-500 hover:text-gray-300 cursor-pointer transition-colors">
+              <li className="text-white hover:underline decoration-stone-500 decoration-3 hover:text-gray-300 cursor-pointer transition-colors">
                 Blog
               </li>
-              <li className="text-white hover:underline decoration-stone-500 hover:text-gray-300 cursor-pointer transition-colors">
+              <li className="text-white hover:underline decoration-stone-500 decoration-3 hover:text-gray-300 cursor-pointer transition-colors">
                 Merch
               </li>
             </ul>
@@ -59,19 +59,19 @@ const NavDropdown = () => {
             </p>
 
             <ul className="space-y-1.5">
-              <li className="text-white hover:underline decoration-stone-500 hover:text-gray-300 cursor-pointer transition-colors">
+              <li className="text-white hover:underline decoration-stone-500 decoration-3 hover:text-gray-300 cursor-pointer transition-colors">
                 Science
               </li>
-              <li className="text-white hover:underline decoration-stone-500 hover:text-gray-300 cursor-pointer transition-colors">
+              <li className="text-white hover:underline decoration-stone-500 decoration-3 hover:text-gray-300 cursor-pointer transition-colors">
                 Technology
               </li>
-              <li className="text-white hover:underline decoration-stone-500 hover:text-gray-300 cursor-pointer transition-colors">
+              <li className="text-white hover:underline decoration-stone-500 decoration-3 hover:text-gray-300 cursor-pointer transition-colors">
                 Streaming
               </li>
-              <li className="text-white hover:underline decoration-stone-500 hover:text-gray-300 cursor-pointer transition-colors">
+              <li className="text-white hover:underline decoration-stone-500 decoration-3 hover:text-gray-300 cursor-pointer transition-colors">
                 Soundscapes
               </li>
-              <li className="text-white hover:underline decoration-stone-500 hover:text-gray-300 cursor-pointer transition-colors">
+              <li className="text-white hover:underline decoration-stone-500 decoration-3 hover:text-gray-300 cursor-pointer transition-colors">
                 Scenarios
               </li>
             </ul>

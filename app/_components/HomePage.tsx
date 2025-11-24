@@ -9,6 +9,9 @@ import EndelDesktopSec from "./endel-desktop/EndelDesktopSec"
 import EndelTvSec from "./endel-tv/EndelTvSec"
 import EndelStreamingSec from "./endel-streaming/EndelStreamingSec"
 import AppreciatedByExperts from "./appreciated-by-experts/AppreciatedByExperts"
+import JoinEndelDiscordSec from "./join-endel-discord/JoinEndelDiscordSec"
+import FAQSec from "./faq/FAQSec"
+import Footer from "./footer/Footer"
 
 const HomePage = () => {
   return (
@@ -24,9 +27,9 @@ const HomePage = () => {
       <EndelDesktopSec />
       <EndelStreamingSec />
       <AppreciatedByExperts />
-      {/* join endel on discord */}
-      {/* faq */}
-      {/* footer */}
+      <JoinEndelDiscordSec />
+      <FAQSec />
+      <Footer />
     </div>
   )
 }

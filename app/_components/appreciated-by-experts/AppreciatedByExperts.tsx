@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import PageGenTitle from "../PageGenTitle";
 import Image from "next/image";
 import wingLeft from "@/public/appreciate/wing-left.svg";
@@ -187,6 +188,8 @@ const AppreciatedByExperts = () => {
     },
   ];
 
+  const [showMore, setShowMore] = useState(false);
+
   const avatars = [user1, user2, user3, user4, user5, user6];
 
   const mockReviews = reviewsData.map((review, index) => ({
@@ -217,21 +220,41 @@ const AppreciatedByExperts = () => {
           />
         </div>
       </div>
-      <div className="w-[1152px] mx-auto mt-[64px] columns-3 gap-6">
-        {mockReviews.map((review, index) => (
-          <ReviewCard
-            key={index}
-            name={review.name}
-            title={review.title}
-            review={review.review}
+
+      <div
+        className={`w-[1152px] mt-[64px] mx-auto relative ${
+          showMore ? "h-full overflow-visible" : "h-[480px] overflow-hidden"
+        }`}
+      >
+        <div className="w-[1152px] mx-auto columns-3 gap-6">
+          {mockReviews.map((review, index) => (
+            <ReviewCard
+              key={index}
+              name={review.name}
+              title={review.title}
+              review={review.review}
+            >
+              <Image
+                className="w-full h-full"
+                src={review.avatar}
+                alt={review.name}
+              />
+            </ReviewCard>
+          ))}
+        </div>
+
+        <div
+          className={`${
+            showMore ? "sticky" : "absolute"
+          } bottom-0 left-0 flex items-center justify-center w-full h-26 bg-[linear-gradient(0deg,rgb(0,0,0),rgba(0,0,0,0))]`}
+        >
+          <button
+            onClick={() => setShowMore(!showMore)}
+            className="px-10 py-2.5 bg-[#262626] hover:bg-[#808080] border-2 border-white hover:border-[#808080] text-white font-medium text-[22px] rounded-xl duration-300 cursor-pointer"
           >
-            <Image
-              className="w-full h-full"
-              src={review.avatar}
-              alt={review.name}
-            />
-          </ReviewCard>
-        ))}
+            {showMore ? "Okay, I get the point" : "show more"}
+          </button>
+        </div>
       </div>
     </div>
   );
