@@ -6,6 +6,9 @@ import EndelMobileApp from "./endel-mobile-app/EndelMobileApp"
 import EndelAppleWatchSec from "./endel-apple-watch/EndelAppleWatchSec"
 import EndelAmazonAlexaSec from "./endel-amazon-alexa/EndelAmazonAlexaSec"
 import EndelDesktopSec from "./endel-desktop/EndelDesktopSec"
+import EndelTvSec from "./endel-tv/EndelTvSec"
+import EndelStreamingSec from "./endel-streaming/EndelStreamingSec"
+import AppreciatedByExperts from "./appreciated-by-experts/AppreciatedByExperts"
 
 const HomePage = () => {
   return (
@@ -17,10 +20,10 @@ const HomePage = () => {
       <EndelMobileApp />
       <EndelAppleWatchSec />
       <EndelAmazonAlexaSec />
-      {/* endel for tv */}
+      <EndelTvSec />
       <EndelDesktopSec />
-      {/* endel on streaming platforms */}
-      {/* appriciated by exparts */}
+      <EndelStreamingSec />
+      <AppreciatedByExperts />
       {/* join endel on discord */}
       {/* faq */}
       {/* footer */}
