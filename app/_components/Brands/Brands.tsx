@@ -3,21 +3,21 @@ import Image from "next/image";
 
 
 const brands = [
-  "@/public/brands/the-wall-street.svg",
-  "@/public/brands/rolling-stone.svg",
-  "@/public/brands/wired.svg",
-  "@/public/brands/pitchfork.svg",
-  "@/public/brands/the-guardian.svg",
-  "@/public/brands/hypebeast.svg",
-  "@/public/brands/dazed.svg",
-  "@/public/brands/billboard.svg",
-  "@/public/brands/id.svg",
-  "@/public/brands/the-new-yorker.svg",
-  "@/public/brands/v-magazine.svg",
-  "@/public/brands/vogue.svg",
-  "@/public/brands/tc.svg",
-  "@/public/brands/the-verge.svg",
-  "@/public/brands/variety.svg",
+  "/Brands/the-wall-street.svg",
+  "/Brands/rolling-stone.svg",
+  "/Brands/wired.svg",
+  "/Brands/pitchfork.svg",
+  "/Brands/the-guardian.svg",
+  "/Brands/hypebeast.svg",
+  "/Brands/dazed.svg",
+  "/Brands/billboard.svg",
+  "/Brands/id.svg",
+  "/Brands/the-new-yorker.svg",
+  "/Brands/v-magazine.svg",
+  "/Brands/vogue.svg",
+  "/Brands/tc.svg",
+  "/Brands/the-verge.svg",
+  "/Brands/variety.svg",
 ];
 
 const Brands = () => {
@@ -31,6 +31,8 @@ const Brands = () => {
           <Image
             src={brand}
             alt={`Brand ${index + 1}`}
+            width={212}
+            height={48}
             className="w-full h-auto object-contain opacity-50 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert "
           />
         </div>
