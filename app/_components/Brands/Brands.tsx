@@ -30,7 +30,10 @@ const Brands = () => {
           <Image
             src={brand}
             alt={`Brand ${index + 1}`}
-            className="w-full h-auto object-contain opacity-50 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert "
+            width={200}
+            height={100}
+            className="w-full h-auto object-contain opacity-50 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert"
+            unoptimized
           />
         </div>
       ))}
