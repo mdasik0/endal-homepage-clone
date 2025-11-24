@@ -1,5 +1,3 @@
-import { Twitter, X } from "lucide-react";
-import React from "react";
 import { FaDiscord, FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 

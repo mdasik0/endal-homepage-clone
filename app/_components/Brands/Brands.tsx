@@ -1,37 +1,22 @@
 import React from "react";
 import Image from "next/image";
-import billboard from "@/public/brands/billboard.svg";
-import dazed from "@/public/brands/dazed.svg";
-import hypebeast from "@/public/brands/hypebeast.svg";
-import id from "@/public/brands/id.svg";
-import pitchfork from "@/public/brands/pitchfork.svg";
-import rollingStone from "@/public/brands/rolling-stone.svg";
-import tc from "@/public/brands/tc.svg";
-import theGuardian from "@/public/brands/the-guardian.svg";
-import theNewYorker from "@/public/brands/the-new-yorker.svg";
-import theVerge from "@/public/brands/the-verge.svg";
-import theWallStreet from "@/public/brands/the-wall-street.svg";
-import vMagazine from "@/public/brands/v-magazine.svg";
-import variety from "@/public/brands/variety.svg";
-import vogue from "@/public/brands/vogue.svg";
-import wired from "@/public/brands/wired.svg";
 
 const brands = [
-  theWallStreet,
-  rollingStone,
-  wired,
-  pitchfork,
-  theGuardian,
-  hypebeast,
-  dazed,
-  billboard,
-  id,
-  theNewYorker,
-  vMagazine,
-  vogue,
-  tc,
-  theVerge,
-  variety,
+  "/brands/the-wall-street.svg",
+  "/brands/rolling-stone.svg",
+  "/brands/wired.svg",
+  "/brands/pitchfork.svg",
+  "/brands/the-guardian.svg",
+  "/brands/hypebeast.svg",
+  "/brands/dazed.svg",
+  "/brands/billboard.svg",
+  "/brands/id.svg",
+  "/brands/the-new-yorker.svg",
+  "/brands/v-magazine.svg",
+  "/brands/vogue.svg",
+  "/brands/tc.svg",
+  "/brands/the-verge.svg",
+  "/brands/variety.svg",
 ];
 
 const Brands = () => {
