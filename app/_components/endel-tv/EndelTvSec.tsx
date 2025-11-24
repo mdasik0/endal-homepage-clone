@@ -32,7 +32,7 @@ const EndelTvSec = () => {
             height={648}
           />
 
-          <div className="w-full h-full bg-blue-400">
+          <div className="w-full h-full">
             {play ? (
               <video
                 src="/endel-tv/endel-tv-video.mp4"

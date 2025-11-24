@@ -14,7 +14,7 @@ const HeroSection = () => {
         </button>
       </div>
       <div 
-        className='w-[1480px] h-[804px] -mt-36 bg-red-500 bg-contain bg-top mx-[52px]'
+        className='w-[1480px] h-[804px] -mt-36 bg-contain bg-top mx-[52px]'
         style={{
           backgroundImage: "url(/HeroBanner/hero-top-banner-desktop.avif)",
         }}
