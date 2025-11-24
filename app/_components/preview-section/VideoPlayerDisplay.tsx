@@ -15,20 +15,39 @@ const VideoPlayerDisplay = ({
 }: VideoPlayerDisplayProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  // Preload video when selectedVideoId changes
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Force video to load when source changes
+    video.load();
+  }, [selectedVideoId]);
+
+  // Handle play/pause
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
     if (play) {
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch((error) => {
+      // Wait for video to be ready before playing
+      const playVideo = async () => {
+        try {
+          // If video is not loaded yet, wait for it
+          if (video.readyState < 2) {
+            await new Promise((resolve) => {
+              video.addEventListener("loadeddata", resolve, { once: true });
+            });
+          }
+          await video.play();
+        } catch (error) {
           // Ignore AbortError - it's expected when video is paused/stopped
-          if (error.name !== "AbortError") {
+          if (error instanceof Error && error.name !== "AbortError") {
             console.error("Error playing video:", error);
           }
-        });
-      }
+        }
+      };
+      playVideo();
     } else {
       video.pause();
     }
@@ -39,7 +58,7 @@ const VideoPlayerDisplay = ({
         video.pause();
       }
     };
-  }, [play, selectedVideoId]);
+  }, [play]);
   return (
     <div className='w-[1152px] h-[610px] mx-auto mt-26 bg-[url("/background/background.svg")] '>
       <div className="w-[368px] h-[610px] mx-auto relative bg-transparent flex flex-col justify-end ">
@@ -55,12 +74,12 @@ const VideoPlayerDisplay = ({
             )}
           </div>
         </div>
-        <div className="w-[368px] shadow-effect h-full mx-auto absolute z-10 bg-black">
+        <div className="w-[368px] shadow-effect h-full mx-auto absolute z-10 bg-black relative">
           <video
             ref={videoRef}
             src={`/preview-videos/${selectedVideoId || "video-1"}.mp4`}
-            className={`w-full h-full object-contain object-bottom mx-auto pt-10 ${
-              play ? "block" : "hidden"
+            className={`w-full h-full object-contain object-bottom mx-auto pt-10 absolute inset-0 ${
+              play ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
             playsInline
             loop
@@ -68,7 +87,7 @@ const VideoPlayerDisplay = ({
           />
           {!play && (
             <Image
-              className="w-full h-full object-contain object-bottom mx-auto pt-10"
+              className="w-full h-full object-contain object-bottom mx-auto pt-10 relative z-20"
               src={cover}
               alt="cover"
             />
